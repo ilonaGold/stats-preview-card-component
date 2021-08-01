@@ -29,8 +29,7 @@ body {
 /* Layout */
 
 main {
-    width: 325px;
-    margin: 0 20px;
+    margin: 0 25px;
 }
 
 .hero {
@@ -40,16 +39,15 @@ main {
 }
 
 .hero img {
+    display: flex;
     width: 100%;
     opacity: 0.3;
-    border: none;
 }
 
 .card {
     background: var(--card-background);
     text-align: center;
     border-radius: 0 0 8px 8px;
-    margin: 0 auto;
     padding: 40px 35px 15px;
 }
 
@@ -68,6 +66,7 @@ p {
     color: var(--main-paragraph);
     line-height: 27px;
     margin-bottom: 50px;
+    opacity: 0.8;
 }
 
 h2 {
@@ -90,15 +89,64 @@ h3 {
     margin-bottom: 25px;
 }
 
+/* Media queries */
+
+@media (min-width: 768px) {
+    main {
+        margin: 0 60px;
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        display: flex;
+        margin: 177px 165px;
+        height: 450px;
+    }
+    .hero {
+        order: 1;
+        border-radius: 0 8px 8px 0;
+        margin-top: 0;
+    }
+    .hero img {
+        object-fit: cover;
+        height: 450px;
+        width: 540px;
+    }
+    .card {
+        padding: 40px 120px 75px 70px;
+        text-align: left;
+        border-radius: 8px 0 0 8px;
+    }
+    h1 {
+        font-size: 36px;
+        margin-top: 40px;
+    }
+    p {
+        font-size: 15px;
+        margin-bottom: 70px;
+        letter-spacing: -0.2px;
+    } 
+    .stats {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+    h2 {
+        font-size: 23px;
+        margin-bottom: 5px;
+    }
+}
+
 /* Attribution */
 
 .attribution { 
     font-size: 11px; 
     text-align: center;
-    margin: 25px auto;
+    margin: 20px auto;
     color: var(--stat-headings);
  }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--accent);
 }
