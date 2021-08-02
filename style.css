@@ -34,6 +34,7 @@ main {
 
 .hero {
     background: var(--accent);
+    filter: contrast(130%);
     border-radius: 8px 8px 0 0;
     margin-top: 90px;
 }
@@ -91,17 +92,23 @@ h3 {
 
 /* Media queries */
 
-@media (min-width: 768px) {
+@media (min-width: 481px) {
     main {
-        margin: 0 60px;
+        margin: 0 100px;
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
+    main {
+        margin: 0 200px;
+    }
+}
+
+@media (min-width: 1024px) {
     main {
         display: flex;
-        margin: 177px 165px;
-        height: 450px;
+        margin: 100px;
+        height: 400px;
     }
     .hero {
         order: 1;
@@ -110,17 +117,17 @@ h3 {
     }
     .hero img {
         object-fit: cover;
-        height: 450px;
-        width: 540px;
+        height: 400px;
+        width: 400px;
     }
     .card {
-        padding: 40px 120px 75px 70px;
+        padding: 0 50px 50px;
         text-align: left;
         border-radius: 8px 0 0 8px;
     }
     h1 {
-        font-size: 36px;
-        margin-top: 40px;
+        font-size: 30px;
+        margin-top: 50px;
     }
     p {
         font-size: 15px;
@@ -135,6 +142,43 @@ h3 {
     h2 {
         font-size: 23px;
         margin-bottom: 5px;
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        margin: 177px 165px;
+        height: 450px;
+    }
+    .hero img {
+        height: 450px;
+        width: 540px;
+    }
+    .card {
+        padding: 40px 120px 75px 70px;
+    }
+    h1 {
+        font-size: 36px;
+        margin-top: 40px;
+    }
+    p {
+        margin-bottom: 70px;
+        letter-spacing: -0.2px;
+    } 
+}
+@media (min-width: 1920px) {
+    main {
+        display: flex;
+    }
+    .card {
+        padding: 50px 150px;
+        width: 50%;
+    }
+    p {
+        font-size: 18px;
+    }
+    .stats, p {
+        width: 80%;
     }
 }
 
